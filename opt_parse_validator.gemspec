@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.summary               = 'Ruby OptionParser Validators'
   s.description           = 'Implementation of validators for the ruby OptionParser lib. ' \
                             'Mainly used in the CMSScanner gem to define the cli options available'
-  s.homepage              = 'https://github.com/wpscanteam/OptParseValidator'
+  s.homepage              = 'https://github.com/hatanhack/OptParseValidator'
   s.license               = 'MIT'
 
   s.files                 = Dir.glob('lib/**/*') + %w[LICENSE README.md]

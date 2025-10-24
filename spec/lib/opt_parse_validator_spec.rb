@@ -168,7 +168,7 @@ describe OptParseValidator::OptParser do
       end
     end
 
-    # See https://github.com/wpscanteam/CMSScanner/issues/2
+    # See https://github.com/hatanhack/CMSScanner/issues/2
     context 'when no short option' do
       let(:options)  { [verbose_opt, http_opt] }
       let(:http_opt) { OptParseValidator::OptBase.new(['--http-auth log:pass']) }

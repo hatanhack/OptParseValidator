@@ -2,9 +2,9 @@ OptParseValidator
 =================
 
 [![Gem Version](https://badge.fury.io/rb/opt_parse_validator.svg)](https://badge.fury.io/rb/opt_parse_validator)
-![Build](https://github.com/wpscanteam/OptParseValidator/workflows/Build/badge.svg)
-[![Coverage Status](https://img.shields.io/coveralls/wpscanteam/OptParseValidator.svg)](https://coveralls.io/r/wpscanteam/OptParseValidator?branch=master)
-[![Code Climate](https://api.codeclimate.com/v1/badges/56f0307bbbda6d41b99a/maintainability)](https://codeclimate.com/github/wpscanteam/OptParseValidator/maintainability)
+![Build](https://github.com/hatanhack/OptParseValidator/workflows/Build/badge.svg)
+[![Coverage Status](https://img.shields.io/coveralls/hatanhack/OptParseValidator.svg)](https://coveralls.io/r/hatanhack/OptParseValidator?branch=master)
+[![Code Climate](https://api.codeclimate.com/v1/badges/56f0307bbbda6d41b99a/maintainability)](https://codeclimate.com/github/hatanhack/OptParseValidator/maintainability)
 
 
 ### Installation
@@ -42,16 +42,16 @@ Then have a play with
 It is worth to note that when aliases are used, it is recommended to provide them first in the CLI. Otherwise, they might override user-suplied cli options. For example, using the options above, ```ruby test.rb -m aa -o override.txt --alias``` won't have the desired effect (to have --output as override.txt), but ```ruby test.rb --alias -m aa -o override.txt``` will.
 
 For more option examples, see
- - https://github.com/wpscanteam/CMSScanner/blob/master/app/controllers/core/cli_options.rb
- - https://github.com/wpscanteam/wpscan/blob/master/app/controllers/enumeration/cli_options.rb
+ - https://github.com/hatanhack/CMSScanner/blob/master/app/controllers/core/cli_options.rb
+ - https://github.com/hatanhack/wpscan/blob/master/app/controllers/enumeration/cli_options.rb
 
 Please feel free to send Pull Requests to improve this Readme
 
 ### Global Attributes
 
 Some attributes are available for all Validators:
-- :required (whether or not the associated cli option is required/mandatory - [example](https://github.com/wpscanteam/CMSScanner/blob/master/app/controllers/core/cli_options.rb#L9)).
-- :required_unless (like the above, except if the option/s given in this parameter are called in the CLI - [example](https://github.com/wpscanteam/wpscan/blob/master/app/controllers/core.rb#L7), can be a single symbol or array of symbols)
+- :required (whether or not the associated cli option is required/mandatory - [example](https://github.com/hatanhack/CMSScanner/blob/master/app/controllers/core/cli_options.rb#L9)).
+- :required_unless (like the above, except if the option/s given in this parameter are called in the CLI - [example](https://github.com/hatanhack/wpscan/blob/master/app/controllers/core.rb#L7), can be a single symbol or array of symbols)
 - :default (Default value to use if the option is not supplied, the correct format has to be used as it won't go through the validation and normalization processes)
 - :value_if_empty (Value to use if no argument has been supplied for the related option)
 - :advanced (Whether or or not the option is an advanced one. If set to true, the option won't be displayed in the #simple_help, but will in the #full_help)

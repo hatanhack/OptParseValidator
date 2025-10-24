@@ -3,7 +3,7 @@
 class OptionParser
   # Hack to suppress the completion (except for the -h/--help) which was leading to
   # unwanted behaviours
-  # See https://github.com/wpscanteam/CMSScanner/issues/2
+  # See https://github.com/hatanhack/CMSScanner/issues/2
   module Completion
     class << self
       alias original_candidate candidate
